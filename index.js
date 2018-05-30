@@ -50,6 +50,7 @@ class Customer {
     return this.deliveries().map(delivery => {
       return delivery.meal();
     })
+  }
     totalSpent() {
       let total = this.meals().map(meal => {
         return meal.price;
@@ -57,7 +58,7 @@ class Customer {
       return total;
     }
   }
-}
+
 
 class Meal {
   constructor(title, price) {
