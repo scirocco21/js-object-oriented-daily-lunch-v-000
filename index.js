@@ -54,6 +54,7 @@ class Customer {
     let total = this.meals.map(meal => {
       return meal.price;
     }).reduce((sum, amount) => sum + amount)
+    return total;
   }
 }
 
