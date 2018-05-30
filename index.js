@@ -32,6 +32,12 @@ class Neighborhood {
       return customer.neighborhoodId === this.id;
     })
   }
+  meals() {
+    let duplicateArray = this.deliveries().map(delivery => {
+      return delivery.meal();
+    })
+    return removeDuplicates(duplicateArray);
+  }
 }
 
 class Customer {
