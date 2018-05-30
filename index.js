@@ -85,7 +85,7 @@ class Meal {
     return removeDuplicates(duplicateArray);
   }
   static byPrice() {
-    return store.meals.sort(function(a,b) {return b - a});
+    return store.meals.sort(function(a,b) {return b.price - a.price});
   }
 }
 
