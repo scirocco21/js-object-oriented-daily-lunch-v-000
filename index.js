@@ -65,6 +65,12 @@ class Meal {
       return delivery.mealId === this.id
     })
   }
+  customers() {
+    let duplicateArray = this.deliveries().map(delivery => {
+      return delivery.customer();
+    })
+    return removeDuplicates(duplicateArray);
+  }
 }
 
 class Delivery {
